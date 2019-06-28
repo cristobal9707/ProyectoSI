@@ -20,4 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/asesoria', 'AsesoriaController');
-Route::resource('/cliente', 'AsesoriaController');
+Route::resource('/cliente', 'ClienteController');

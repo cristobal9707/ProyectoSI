@@ -49,8 +49,8 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a class="navbar-brand" href="{{ url('/cliente') }}">Cliente</a>
-                                <a class="navbar-brand" href="{{ url('/asesoria') }}">Asesoria</a>
+                                <a class="navbar-brand" href="{{ url('/cliente') }}">Clientes</a>
+                                <a class="navbar-brand" href="{{ url('/asesoria') }}">Asesorias</a>
                                 <a id="navbarDropdown" class="navbar-brand dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
