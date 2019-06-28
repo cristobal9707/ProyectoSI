@@ -1,0 +1,365 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Categoria</th>
+            <th scope="col">Concepto</th>
+            <th scope="col">Centro de Resultados</th>
+            <th scope="col">Acumulado</th>
+            <th> </th>
+        </tr>
+    </thead>
+    @foreach ($Categorias1->auditorias as $item)
+    <tr>
+        <td>{{ $item->categorias->nombre }}</td>
+        <td>{{ $item->concepto }}</td>
+        <td>{{ $item->centro_resultado }}</td>
+        <td>{{ $item->acumulado }}</td>
+        <td>
+            <form action="/auditoria/{{ $item->id }}" method="POST">
+                @csrf
+                @method('delete')
+                <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                <v-btn color="error" type="submit">Eliminar</v-btn>
+            </form>
+        </td>
+    </tr>
+    @endforeach
+    @foreach ($Categorias2->auditorias as $item)
+    <tr>
+        <td>{{ $item->categorias->nombre }}</td>
+        <td>{{ $item->concepto }}</td>
+        <td>{{ $item->centro_resultado }}</td>
+        <td>{{ $item->acumulado }}</td>
+        <td>
+            <form action="/auditoria/{{ $item->id }}" method="POST">
+                @csrf
+                @method('delete')
+                <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                <v-btn color="error" type="submit">Eliminar</v-btn>
+            </form>
+        </td>
+    </tr>
+    @endforeach
+</table>
+
+<h4 align="end">MARGEN DE EXPLOTACION: MUCHO XD</h4>
+</div>
+</v-card>
+
+<v-card style="padding: 10px; margin-bottom: 10px;">
+    <div class="content">
+        <h4>{{ $Categorias3->nombre}}</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Concepto</th>
+                    <th scope="col">Centro de Resultados</th>
+                    <th scope="col">Acumulado</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            @foreach ($Categorias3->auditorias as $item)
+            <tr>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </table>
+
+        <h4 align="end">RESULTADO OPERACIONAL: MUCHO XD</h4>
+    </div>
+</v-card>
+
+<v-card style="padding: 10px; margin-bottom: 10px; ">
+    <div class="content">
+        <h4>Gastos Financieros</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Concepto</th>
+                    <th scope="col">Centro de Resultados</th>
+                    <th scope="col">Acumulado</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            @foreach ($Categorias4->auditorias as $item)
+            <tr>
+                <td>{{ $item->categorias->nombre }}</td>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+            @foreach ($Categorias5->auditorias as $item)
+            <tr>
+                <td>{{ $item->categorias->nombre }}</td>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+            @foreach ($Categorias6->auditorias as $item)
+            <tr>
+                <td>{{ $item->categorias->nombre }}</td>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+            @foreach ($Categorias7->auditorias as $item)
+            <tr>
+                <td>{{ $item->categorias->nombre }}</td>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+            @foreach ($Categorias8->auditorias as $item)
+            <tr>
+                <td>{{ $item->categorias->nombre }}</td>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+            @foreach ($Categorias9->auditorias as $item)
+            <tr>
+                <td>{{ $item->categorias->nombre }}</td>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </table>
+
+        <h4 align="end">GASTOS FINANCIEROS: MUCHO XD</h4>
+        <v-divider></v-divider>
+        <h4>{{ $Categorias10->nombre}}</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Concepto</th>
+                    <th scope="col">Centro de Resultados</th>
+                    <th scope="col">Acumulado</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            @foreach ($Categorias10->auditorias as $item)
+            <tr>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </table>
+        <h4>{{ $Categorias11->nombre}}</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Concepto</th>
+                    <th scope="col">Centro de Resultados</th>
+                    <th scope="col">Acumulado</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            @foreach ($Categorias11->auditorias as $item)
+            <tr>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </table>
+
+        <h4 align="end">RESULTADO NO OPERACIONAL: MUCHO XD</h4>
+        <h4 align="end">RESULTADO ANTES IMPUESTO A LA RENTA: MUCHO XD</h4>
+    </div>
+</v-card>
+
+<v-card style="padding: 10px; margin-bottom: 10px;">
+    <div class="content">
+        <h4>Perdida Liquida</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Concepto</th>
+                    <th scope="col">Centro de Resultados</th>
+                    <th scope="col">Acumulado</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            @foreach ($Categorias12->auditorias as $item)
+            <tr>
+                <td>{{ $item->categorias->nombre }}</td>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+            @foreach ($Categorias13->auditorias as $item)
+            <tr>
+                <td>{{ $item->categorias->nombre }}</td>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+            @foreach ($Categorias14->auditorias as $item)
+            <tr>
+                <td>{{ $item->categorias->nombre }}</td>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </table>
+        <h4 align="end">UTILIDAD (PERDIDA) LIQUIDA: MUCHO XD</h4>
+    </div>
+</v-card>
+
+<v-card style="padding: 10px; margin-bottom: 10px;">
+    <div class="content">
+        <h4>{{ $Categorias15->nombre}}</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Concepto</th>
+                    <th scope="col">Centro de Resultados</th>
+                    <th scope="col">Acumulado</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            @foreach ($Categorias15->auditorias as $item)
+            <tr>
+                <td>{{ $item->concepto }}</td>
+                <td>{{ $item->centro_resultado }}</td>
+                <td>{{ $item->acumulado }}</td>
+                <td>
+                    <form action="/auditoria/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <v-btn color="success" href="/auditoria/{{ $item->id }}/edit">Editar</v-btn>
+                        <v-btn color="info" href="/auditoria/{{ $item->id }}">Info</v-btn>
+                        <v-btn color="error" type="submit">Eliminar</v-btn>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </table>
+        <h4 align="end">UTILIDAD (PERDIDA) DEL EJERCICIO: MUCHO XD</h4>
+    </div>
+</v-card>
+</v-layout>
