@@ -16,11 +16,9 @@ class CreateCategoriasTable extends Migration
         Schema::create('categorias', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre');
+            $table->string('simbolo');
             $table->timestamps();
         });
-
-
-        
     }
 
     /**
