@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class AsesoriaTableSeeder extends Seeder
+class ItemTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class AsesoriaTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 1,
             'concepto' => 'VENTAS Y SERVICIO',
             'centro_resultado' => 195,
@@ -19,7 +19,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 1,
             'concepto' => 'VENTAS Y SERVICIO',
             'centro_resultado' => 193,
@@ -27,7 +27,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 2,
             'concepto' => 'INSUMOS MATERIALES',
             'centro_resultado' => 100,
@@ -35,7 +35,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 2,
             'concepto' => 'INSUMOS MATERIALES',
             'centro_resultado' => 193,
@@ -43,7 +43,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 2,
             'concepto' => 'INSUMOS MATERIALES',
             'centro_resultado' => 195,
@@ -51,7 +51,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 2,
             'concepto' => 'INSUMOS MATERIALES',
             'centro_resultado' => 21,
@@ -59,7 +59,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 2,
             'concepto' => 'INSUMOS DE SEGURIDAD',
             'centro_resultado' => 21,
@@ -67,7 +67,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 2,
             'concepto' => 'INSUMOS DE SEGURIDAD',
             'centro_resultado' => 100,
@@ -76,7 +76,7 @@ class AsesoriaTableSeeder extends Seeder
             'updated_at' => '2019-06-22 00:00:00',
         ]);
         //CAMBIAR PARAA ADELANTE
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 3,
             'concepto' => 'HONORARIOS CONTADOR',
             'centro_resultado' => 0,
@@ -84,7 +84,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 3,
             'concepto' => 'OXIGENO/AGAMIX',
             'centro_resultado' => 193,
@@ -92,7 +92,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 3,
             'concepto' => 'ARRIENDO EQUIPOS Y HERR.',
             'centro_resultado' => 193,
@@ -100,7 +100,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 3,
             'concepto' => 'ARRIENDO EQUIPOS Y HERR.',
             'centro_resultado' => 21,
@@ -108,7 +108,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 3,
             'concepto' => 'SERVICIOS/CONTRATACIONES',
             'centro_resultado' => 193,
@@ -116,7 +116,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 3,
             'concepto' => 'SERVICIOS/CONTRATACIONES',
             'centro_resultado' => 21,
@@ -124,7 +124,7 @@ class AsesoriaTableSeeder extends Seeder
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
-        DB::table('asesorias')->insert([
+        DB::table('items')->insert([
             'categoria_id' => 3,
             'concepto' => 'GASTOS MENORES',
             'centro_resultado' => 21,
