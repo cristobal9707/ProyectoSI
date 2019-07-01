@@ -17,8 +17,8 @@ class CreateCategoriaEstadoderesultadosTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('categoria_id');
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade')->onUpdate('cascade'); 
-            $table->unsignedBigInteger('estadosderesultado_id');
-            $table->foreign('estadosderesultado_id')->references('id')->on('estadosderesultados')->onDelete('cascade')->onUpdate('cascade'); 
+            $table->unsignedBigInteger('estado_de_resultados_id');
+            $table->foreign('estado_de_resultados_id')->references('id')->on('estado_de_resultados')->onDelete('cascade')->onUpdate('cascade'); 
             $table->timestamps();
         });
     }

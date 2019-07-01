@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Cliente;
+use App\EstadoDeResultado;
 
-class ClienteController extends Controller
+class RegistroController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return view('clientes.index', [
-            'Clientes' => Cliente::all(),
+        return view('registros.index', [
+            'Registros' => EstadoDeResultado::all(),
         ]);
     }
 
@@ -26,7 +26,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('clientes.create');
+        return view('registros.create');
     }
 
     /**
@@ -39,12 +39,14 @@ class ClienteController extends Controller
     {
         $validData = $request->validate([
             'nombre' => 'required|min:3|max:30',
-            'email' => 'required|min:3|max:40',
+            'fecha' => 'required|min:3|max:40',
+            'cliente_id' => 'required',
         ]);
-        $cliente = new Cliente();
-        $cliente->nombre = $validData['nombre'];
-        $cliente->email = $validData['email'];
-        $cliente->save();
+        $estado = new EstadoDeResultado();
+        $estado->nombre = $validData['nombre'];
+        $estado->fecha = $validData['fecha'];
+        $estado->cliente_id = $validData['cliente_id'];
+        $estado->save();
         return redirect('clientes');
     }
 
@@ -55,11 +57,8 @@ class ClienteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   
-        $cliente = Cliente::findOrFail($id);
-        return view('clientes.show', [
-            'Clientes' => $cliente,
-        ]);
+    {
+        //
     }
 
     /**
@@ -70,10 +69,7 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        $cliente = Cliente::findOrFail($id);
-        return view('clientes.edit', [
-            'Clientes' => $cliente,
-        ]);
+        //
     }
 
     /**
@@ -85,15 +81,7 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validData = $request->validate([
-            'nombre' => 'required|min:3|max:30',
-            'email' => 'required|min:3|max:40',
-        ]);
-        $cliente = Cliente::findOrFail($id);
-        $cliente->nombre = $validData['nombre'];
-        $cliente->email = $validData['email'];
-        $cliente->save();
-        return redirect('clientes');
+        //
     }
 
     /**
@@ -104,8 +92,6 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        $cliente = Cliente::findOrFail($id);
-        $cliente -> delete();
-        return redirect('clientes');
+        //
     }
 }

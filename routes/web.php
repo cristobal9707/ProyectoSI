@@ -19,5 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/asesoria', 'AsesoriaController');
-Route::resource('/cliente', 'ClienteController');
+Route::resource('/registros', 'RegistroController');
+Route::resource('/clientes', 'ClienteController');
