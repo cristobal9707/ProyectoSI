@@ -22,15 +22,31 @@
                                 @csrf
                                 <div class="form-group">
                                     <v-layout>
-                                        <v-flex xs6>
+                                        <v-flex xs4>
+                                            <v-text-field type="text" id="fecha" name="fecha" label="Fecha AAAA-MM-DD"
+                                                value="{{old('fecha')}}" :counter="10">
+                                            </v-text-field>
+                                        </v-flex>
+                                        <v-flex xs4>
                                             <v-text-field type="text" id="nombre" name="nombre" label="Nombre"
                                                 value="{{old('nombre')}}" :counter="30">
                                             </v-text-field>
                                         </v-flex>
-                                        <v-flex xs6>
-                                            <v-text-field type="text" id="email" name="email" label="Email"
-                                                value="{{old('email')}}" :counter="40">
-                                            </v-text-field>
+                                    </v-layout>
+                                    <v-layout>
+                                        <v-flex xs4>
+                                            <h5>Cliente</h5>
+                                        </v-flex>    
+                                    </v-layout>
+                                    <v-layout>
+                                          <v-flex xs4>
+                                        <select class="form-control btn-lg" type="text" id="cliente_id"
+                                            name="cliente_id" label="Cliente_id">
+                                            @foreach ($Clientes as $item)
+                                            <option value="{{ $item->id}}"> {{ $item->id}} - {{ $item->nombre }}
+                                            </option>
+                                            @endforeach
+                                        </select>
                                         </v-flex>
                                     </v-layout>
                                     

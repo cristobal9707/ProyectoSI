@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\EstadoDeResultado;
+use App\Cliente;
+use App\Categoria;
 
 class RegistroController extends Controller
 {
@@ -26,7 +28,11 @@ class RegistroController extends Controller
      */
     public function create()
     {
-        return view('registros.create');
+        $cliente = Cliente::all();
+        return view('registros.create',[
+            'Clientes' => $cliente,
+        ]);
+            
     }
 
     /**
@@ -47,7 +53,7 @@ class RegistroController extends Controller
         $estado->fecha = $validData['fecha'];
         $estado->cliente_id = $validData['cliente_id'];
         $estado->save();
-        return redirect('clientes');
+        return redirect('registros');
     }
 
     /**
@@ -58,7 +64,14 @@ class RegistroController extends Controller
      */
     public function show($id)
     {
-        //
+        $categoria = Categoria::all();
+        $registro = EstadoDeResultado::find($id);
+        $cliente = Cliente::all();
+        return view('registros.show',[
+            'Clientes' => $cliente,
+            'Registros' => $registro,
+            'Categorias' =>$categoria
+        ]);
     }
 
     /**
@@ -69,7 +82,12 @@ class RegistroController extends Controller
      */
     public function edit($id)
     {
-        //
+        $registro = EstadoDeResultado::findOrFail($id);
+        $cliente = Cliente::all();
+        return view('registros.edit',[
+            'Clientes' => $cliente,
+            'Registros' => $registro
+        ]);
     }
 
     /**
@@ -81,7 +99,17 @@ class RegistroController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validData = $request->validate([
+            'nombre' => 'required|min:3|max:30',
+            'fecha' => 'required|min:3|max:40',
+            'cliente_id' => 'required',
+        ]);
+        $estado = EstadoDeResultado::findOrFail($id);
+        $estado->nombre = $validData['nombre'];
+        $estado->fecha = $validData['fecha'];
+        $estado->cliente_id = $validData['cliente_id'];
+        $estado->save();
+        return redirect('registros');
     }
 
     /**
@@ -92,6 +120,8 @@ class RegistroController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $registro = EstadoDeResultado::findOrFail($id);
+        $registro -> delete();
+        return redirect('registros');
     }
 }

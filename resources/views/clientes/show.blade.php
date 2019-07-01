@@ -6,9 +6,9 @@
         <v-container grid-list-lg>
             <v-layout align-space-around justify-center column class="form-contenedor">
                 <v-card style="padding: 10px; margin-bottom: 10px;">
-                    <h2>Registros</h2>
+                    <h2>Registros - {{$Clientes->nombre}}</h2>
                     <v-divider></v-divider>
-                    <h4>Cliente: {{$Clientes->nombre}}</h4>
+                    <a href="/clientes" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Volver</a>
                     <table class="table" style="margin-top: 10px;">
                         <thead class="thead-dark">
                             <tr>
