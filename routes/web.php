@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/registros', 'RegistroController');
 Route::resource('/clientes', 'ClienteController');
+Route::resource('/items', 'ItemController');

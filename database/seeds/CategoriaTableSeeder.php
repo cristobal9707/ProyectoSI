@@ -83,7 +83,7 @@ class CategoriaTableSeeder extends Seeder
         
         DB::table('categorias')->insert([
             'nombre'=> 'Correccion Monetaria',
-            'simbolo' => '-',
+            'simbolo' => '±',
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
@@ -97,14 +97,14 @@ class CategoriaTableSeeder extends Seeder
         
         DB::table('categorias')->insert([
             'nombre'=> 'Utilidad (Perdida) Consolidada',
-            'simbolo' => '-',
+            'simbolo' => '±',
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
         
         DB::table('categorias')->insert([
             'nombre'=> 'Interes Minoritario',
-            'simbolo' => '-',
+            'simbolo' => '±',
             'created_at' => '2019-06-22 00:00:00',
             'updated_at' => '2019-06-22 00:00:00',
         ]);
