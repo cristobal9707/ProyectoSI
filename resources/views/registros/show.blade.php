@@ -7,7 +7,7 @@
             <v-layout align-space-around justify-center column class="form-contenedor">
                 <v-card style="padding: 10px; margin-bottom: 10px;">
                         <h2 align="center">Estados de Resultados</h2>
-                        <a href="/registros/create" class="btn btn-success btn-lg" role="button" aria-pressed="true">Nuevo registro</a>
+                        <a href="/items/create" class="btn btn-success btn-lg" role="button" aria-pressed="true">Nuevo item</a>
                 </v-card>
                 @foreach ($Categorias as $item)
                 <v-card style="padding: 10px; margin-bottom: 10px;">
