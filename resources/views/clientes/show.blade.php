@@ -14,8 +14,7 @@
                             <tr>
                                 <th scope="col">Fecha</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Total</th>
-                                <th scope="col"></th>
+                                <th scope="col">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -23,9 +22,14 @@
                             <tr class="table-info">
                                 <th scope="row">{{ $item->fecha }}</th>
                                 <td>{{ $item->nombre }}</td>
-                                <td>{{ $item->email }}</td>
-                                <td>
-                                    
+                                <td><form action="/registros/{{ $item->id }}" method="POST">
+                                    @csrf
+                                    @method('delete')
+                                    <a href="/registros/{{ $item->id }}/edit" class="btn btn-success" role="button" aria-pressed="true">Editar</a>
+                                    <a href="/registros/{{ $item->id }}" class="btn btn-info" role="button" aria-pressed="true">Informacion</a>
+                                    <a href="/export/{{$item->id}}" class="btn btn-primary" role="button" aria-pressed="true">Exportar</a>
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
                                 </td>
                             </tr>
                             @endforeach
