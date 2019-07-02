@@ -32,7 +32,7 @@
                                             @method('delete')
                                             <a href="/registros/{{ $item->id }}/edit" class="btn btn-success" role="button" aria-pressed="true">Editar</a>
                                             <a href="/registros/{{ $item->id }}" class="btn btn-info" role="button" aria-pressed="true">Informacion</a>
-                                            <a href="{{route('export')}}" class="btn btn-primary" role="button" aria-pressed="true">Exportar</a>
+                                            <a href="/export/{{$item->id}}" class="btn btn-primary" role="button" aria-pressed="true">Exportar</a>
                                             <button type="submit" class="btn btn-danger">Eliminar</button>
                                         </form>
                                     </td>

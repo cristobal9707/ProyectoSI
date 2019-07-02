@@ -15,4 +15,9 @@ class EstadoDeResultado extends Model
     {
         return $this->belongsTo('App\Cliente', 'cliente_id', 'id');
     }
+
+    public function relacionItem()
+    {
+        return $this->hasMany('App\Item', 'estado_de_resultados', 'id');
+    }
 }

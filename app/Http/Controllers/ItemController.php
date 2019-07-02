@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Item;
 use App\Categoria;
+use App\EstadoDeResultado;
 
 class ItemController extends Controller
 {
@@ -23,11 +24,13 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        $categoria = Categoria::all();
+        $categorias = Categoria::all();
+        $estado = EstadoDeResultado::find($id);
         return view('items.create',[
-            'Categorias' => $categoria,
+            'Categorias' => $categorias,
+            'Estado' => $estado
         ]);
     }
 
@@ -44,12 +47,14 @@ class ItemController extends Controller
             'sucursal' => 'required|integer',
             'total' => 'required|integer',
             'categoria_id' => 'required',
+            'registro' => 'required'
         ]);
         $item = new Item();
         $item->concepto = $validData['concepto'];
         $item->sucursal = $validData['sucursal'];
         $item->total = $validData['total'];
         $item->categoria_id = $validData['categoria_id'];
+        $item->estado_de_resultados_id = $validData['registro'];
         $item->save();
         return redirect('registros');
     }

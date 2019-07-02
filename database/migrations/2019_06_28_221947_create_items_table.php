@@ -13,6 +13,7 @@ class CreateItemsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('concepto');
@@ -20,8 +21,11 @@ class CreateItemsTable extends Migration
             $table->bigInteger('total');
             $table->unsignedBigInteger('categoria_id');
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('estado_de_resultados_id');
+            $table->foreign('estado_de_resultados_id')->references('id')->on('estado_de_resultados')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -31,6 +35,8 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('items');
+        Schema::enableForeignKeyConstraints();
     }
 }

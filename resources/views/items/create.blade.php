@@ -6,7 +6,7 @@
         <v-container grid-list-lg>
                 <v-layout align-space-around justify-center column class="form-contenedor">
                         <v-card style="padding: 10px;">
-                            <h1>Nuevo Item</h1>
+                        <h1>Nuevo Item en Registro ID:{{$Estado->id}}</h1>
                             <v-divider></v-divider>
                             <h3>Datos del Item</h3>
                             @if($errors->any())
@@ -35,6 +35,11 @@
                                         <v-flex xs6>
                                             <v-text-field type="text" id="total" name="total" label="Monto"
                                                 value="{{old('total')}}" :counter="15">
+                                            </v-text-field>
+                                        </v-flex>
+                                        <v-flex xs6>
+                                        <v-text-field class="escondido" type="text" id="registro" name="registro" label="Registro ID"
+                                                value="{{$Estado->id}}">
                                             </v-text-field>
                                         </v-flex>
                                     </v-layout>

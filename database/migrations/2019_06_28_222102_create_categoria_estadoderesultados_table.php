@@ -13,6 +13,7 @@ class CreateCategoriaEstadoderesultadosTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('categoria_estadoderesultados', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('total');
@@ -22,6 +23,7 @@ class CreateCategoriaEstadoderesultadosTable extends Migration
             $table->foreign('estado_de_resultados_id')->references('id')->on('estado_de_resultados')->onDelete('cascade')->onUpdate('cascade'); 
             $table->timestamps();
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -31,6 +33,8 @@ class CreateCategoriaEstadoderesultadosTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('categoria_estadoderesultados');
+        Schema::enableForeignKeyConstraints();   
     }
 }

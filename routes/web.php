@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/registros', 'RegistroController');
 Route::resource('/clientes', 'ClienteController');
 Route::resource('/items', 'ItemController');
+Route::get('items/create/{id}',['uses' => 'ItemController@create']);
 
 // Export to excel
-Route::get('export','EstadoDeResultadoController@exportExcel')->name('export');
+Route::get('export/{id}',['uses' => 'EstadoDeResultadoController@exportExcel']);

@@ -69,13 +69,13 @@ class RegistroController extends Controller
      */
     public function show($id)
     {
-        $categoria = Categoria::all();
+        $categorias = Categoria::all();
         $registro = EstadoDeResultado::find($id);
-        $cliente = Cliente::all();
+        $cliente = Cliente::find($id);
         return view('registros.show',[
-            'Clientes' => $cliente,
-            'Registros' => $registro,
-            'Categorias' =>$categoria
+            'Cliente' => $cliente,
+            'Registro' => $registro,
+            'Categorias' =>$categorias
         ]);
     }
 
