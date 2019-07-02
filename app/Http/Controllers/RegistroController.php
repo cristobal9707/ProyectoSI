@@ -53,6 +53,11 @@ class RegistroController extends Controller
         $estado->fecha = $validData['fecha'];
         $estado->cliente_id = $validData['cliente_id'];
         $estado->save();
+        $categorias = Categoria::all();
+        foreach($categorias as $categoria){
+            $estado->relacionCategoria()->attach($categoria
+            ,['total'=> 10]);
+        }
         return redirect('registros');
     }
 

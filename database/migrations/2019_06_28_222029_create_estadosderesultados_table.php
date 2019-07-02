@@ -17,6 +17,12 @@ class CreateEstadosderesultadosTable extends Migration
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->date('fecha');
+            $table->bigInteger('margen_de_explotacion')->nullable($value = true);
+            $table->bigInteger('resultado_operacional')->nullable($value = true);
+            $table->bigInteger('resultado_no_operacional')->nullable($value = true);
+            $table->bigInteger('resultado_antes_de_impuesto_a_la_renta')->nullable($value = true);
+            $table->bigInteger('utilidad_liquida')->nullable($value = true);
+            $table->bigInteger('utilidad_del_ejercicio')->nullable($value = true);
             $table->unsignedBigInteger('cliente_id');
             $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade')->onUpdate('cascade'); 
             $table->timestamps();
